@@ -1,14 +1,14 @@
 # BeCalm
-### About the project
-"BeCalm"  is a project to connect patients seeking therapy with the therapists providing their services. 
+## About the project
+"BeCalm" is a project to connect patients seeking therapy with the therapists providing their services. The service allows users to find suitable doctors by answering a questionnaire, schedule appointments, and chat with their therapist on the platform.
 
-### Features list and application use-cases
+## Features list and application use-cases
 ##### For patient:
 1. Sign up
 2. Sign in
 3. Forgot password (password recovery)
 4. Pass a questionnaire to pick an appropriate doctor
-5. Filter the list of doctors according to defined criterias from a questionnaire and display them
+5. Filter the list of doctors according to defined criteria from a questionnaire and display them
 6. Therapist’s details screen with all information about them
 7. Book the timeslot for a meeting with the doctor 
 8. Cancel a meeting with doctor
@@ -17,7 +17,7 @@
 11. Change of personal details
 12. Sign out
     
-##### For  therapist:
+##### For therapist:
 1. Sign up
 2. Sign in
 3. Forgot password (password recovery)
