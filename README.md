@@ -14,8 +14,9 @@
 8. Cancel a meeting with doctor
 9. View  patient’s bookings
 10. Chat with therapists
-11. Change of personal details
-12. Sign out
+11. Make payment for therapy sessions
+12. Change of personal details
+13. Sign out
     
 ##### For therapist:
 1. Sign up
