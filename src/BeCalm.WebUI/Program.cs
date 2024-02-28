@@ -1,7 +1,10 @@
+using BeCalm.Infrastructure.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddStorage(builder.Configuration);
 
 var app = builder.Build();
 

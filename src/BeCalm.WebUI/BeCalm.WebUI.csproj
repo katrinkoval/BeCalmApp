@@ -4,11 +4,20 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e47d8912-7d81-4943-8743-abf4a9d197ad</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BeCalm.Application\BeCalm.Application.csproj" />
     <ProjectReference Include="..\BeCalm.Core\BeCalm.Core.csproj" />
+    <ProjectReference Include="..\BeCalm.Infrastructure.Data\BeCalm.Infrastructure.Data.csproj" />
   </ItemGroup>
 
 </Project>
