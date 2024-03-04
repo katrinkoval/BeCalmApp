@@ -6,11 +6,11 @@ namespace BeCalm.Infrastructure.Data
 {
     public static class RegistrationExtensions
     {
-        public static void AddStorage(this IServiceCollection serviceCollection, IConfiguration configuration)
+        public static void AddStorage(this IServiceCollection serviceCollection, string connectionString)
         {
             serviceCollection.AddDbContext<BeCalmDbContext>(options =>
             {
-                options.UseSqlServer(configuration["ConnectionStrings:BeCalmConnectionString"]);
+                options.UseSqlServer(connectionString);
             });
         }
     }

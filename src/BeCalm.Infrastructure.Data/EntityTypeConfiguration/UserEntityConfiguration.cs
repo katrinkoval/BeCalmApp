@@ -15,9 +15,6 @@ namespace BeCalm.Infrastructure.Data.EntityTypeConfiguration
             builder.Property(u => u.PasswordHash).IsRequired();
             builder.Property(u => u.Email).IsRequired();
 
-            builder.Property(u => u.Role)
-                .HasConversion<byte>()
-                .IsRequired();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BeCalm.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
 
 
 namespace BeCalm.Infrastructure.Data.EntityTypeConfiguration
@@ -13,8 +14,6 @@ namespace BeCalm.Infrastructure.Data.EntityTypeConfiguration
             builder.Property(ch => ch.TherapistId).IsRequired();
             builder.Property(ch => ch.PatientId).IsRequired(); 
 
-            //builder.HasKey(ch => new {ch.PatientId, ch.TherapistId});
-
             builder.HasMany(ch => ch.Messages)
               .WithOne()
               .HasForeignKey(ch => ch.ChatId)
@@ -23,12 +22,12 @@ namespace BeCalm.Infrastructure.Data.EntityTypeConfiguration
             builder.HasOne(ch => ch.Patient)
                 .WithMany(p => p.Chats)
                 .HasForeignKey(ch => ch.PatientId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasOne(ch => ch.Therapist)
                 .WithMany(t => t.Chats)
                 .HasForeignKey(ch => ch.TherapistId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
         }
     }

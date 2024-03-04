@@ -16,11 +16,13 @@ namespace BeCalm.Infrastructure.Data.EntityTypeConfiguration
 
             builder.HasOne(tp => tp.Patient)
                  .WithMany(p => p.Therapists)
-                 .HasForeignKey(tp => tp.PatientId);
+                 .HasForeignKey(tp => tp.PatientId)
+                 .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasOne(tp => tp.Therapist)
                  .WithMany(t => t.Patients)
-                 .HasForeignKey(tp => tp.TherapistId);
+                 .HasForeignKey(tp => tp.TherapistId)
+                 .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

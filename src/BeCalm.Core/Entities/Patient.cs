@@ -5,7 +5,7 @@ namespace BeCalm.Core.Entities
     public class Patient
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public string Description { get; set; }
                 
         public virtual User Identity { get; set; }

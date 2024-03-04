@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using BeCalm.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace BeCalm.Infrastructure.Data
 {
-    public class BeCalmDbContext: DbContext
+    public class BeCalmDbContext: IdentityDbContext
     {
         public BeCalmDbContext(DbContextOptions options) : base(options) { }
 
